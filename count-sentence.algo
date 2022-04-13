@@ -1,0 +1,22 @@
+ALGORITHM count_sentence
+VAR
+c:CHAR:="";
+str:string:="";
+leng:integer:=0;
+nbr_voyl:integer:=0;
+nbr_word:integer:=0 ;
+BEGIN
+WHILE (c<>".") DO
+write("donner un caractère")
+read(c)
+str:=str+c
+leng:=leng+1
+IF (c="a" or c="A" or c="e" or c="E" or c="i" or c="I" or c="o" or c="O" or c="u" or c="U" or c="y" or c="Y" ) THEN
+    nbr_voyl:=nbr_voyl+1;
+END_IF
+IF (c=" ") THEN
+    nbr_word:=nbr_word+1
+END_IF
+END_WHILE
+write("la longeur de la phrase est :" leng , le nombre de voyelle est :" nbr_voyl , "le nombre de mots est:" nbr_word+1)
+END
